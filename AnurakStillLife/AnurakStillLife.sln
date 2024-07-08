@@ -5,6 +5,10 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnurakStillLife.API", "AnurakStillLife.API\AnurakStillLife.API.csproj", "{23695AC7-3479-4621-A2D1-2D0C487C1387}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{6452C0A6-8BFF-4DD1-AC95-AA1D42340380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{4A372E0A-7E9A-438F-AA01-1D5513CBDB24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{23695AC7-3479-4621-A2D1-2D0C487C1387}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23695AC7-3479-4621-A2D1-2D0C487C1387}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23695AC7-3479-4621-A2D1-2D0C487C1387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6452C0A6-8BFF-4DD1-AC95-AA1D42340380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6452C0A6-8BFF-4DD1-AC95-AA1D42340380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6452C0A6-8BFF-4DD1-AC95-AA1D42340380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6452C0A6-8BFF-4DD1-AC95-AA1D42340380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A372E0A-7E9A-438F-AA01-1D5513CBDB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A372E0A-7E9A-438F-AA01-1D5513CBDB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A372E0A-7E9A-438F-AA01-1D5513CBDB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A372E0A-7E9A-438F-AA01-1D5513CBDB24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
