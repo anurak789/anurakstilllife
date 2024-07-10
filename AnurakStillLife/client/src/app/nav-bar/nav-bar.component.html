@@ -1,0 +1,31 @@
+<header data-bs-theme="dark">
+    <div class="text-bg-dark collapse" id="navbarHeader" [ngbCollapse]="isCollapsed">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4>About</h4>
+            <p class="text-body-secondary">Hello! My name is Anurak Pankham. I'm a freelance still life artist and a software engineer. Thank you for liking my works.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4>Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="linkedin.com/in/anurak-pankham-15a7b1151" class="text-white">Follow on Linkedin</a></li>
+              <li><a href="pkanurak@gmail.com" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <i class="fa-regular fa-paintbrush"></i>
+          <img src="/assets/images/namelogo.png" alt="logo" style="max-height: 70px;">
+          <strong>Album</strong>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+</header>
