@@ -3,6 +3,7 @@ export interface Art {
     name: string;
     description: string;
     price: number;
+    size: string;
     filePath: string;
     artType: string;
     artist: string;
@@ -12,8 +13,9 @@ export const ArtList = [
     {
     id: 0,
     name: 'apples',
-    description: 'djdjdjdjdjdjdj',
+    description: 'Apples and vases decoration.',
     price: 99.99,
+    size: '40x40cm',
     filePath: 'applesvases.jpg',
     artType: 'Still life',
     artist: 'Anurak Pankham'
@@ -21,8 +23,9 @@ export const ArtList = [
     {
     id: 1,
     name: 'white rose',
-    description: 'djdjdjdjdjdjdj',
+    description: 'Whiterose in purple vase.',
     price: 99.99,
+    size: '30x40cm',
     filePath: 'whiterose.jpg',
     artType: 'Still life',
     artist: 'Anurak Pankham'
@@ -30,8 +33,9 @@ export const ArtList = [
     {
     id: 2,
     name: 'mangosteens',
-    description: 'djdjdjdjdjdjdj',
+    description: 'Mangosteens and graps decoration.',
     price: 99.99,
+    size: '40x40cm',
     filePath: 'mangosteens.jpg',
     artType: 'Still life',
     artist: 'Anurak Pankham'

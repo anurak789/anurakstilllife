@@ -3,9 +3,9 @@
       <div class="row d-flex align-items-center" *ngFor="let a of artworks">
         <div class="col">
           <div class="card shadow-sm mb-4 rounded-3">
-            <img width="300" height="225" src="assests/images/{{a.filePath}}" alt=""/>
+            <img width="250" height="225" src="../assets/images/{{a.filePath}}" alt=""/>
             <div class="card-body">
-              <p>{{a.description}}</p><p>{{a.filePath}}</p>
+              <p>{{a.description}}</p><p>{{a.size}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                     <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">View...</a>
