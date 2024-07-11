@@ -32,10 +32,6 @@ jobs:
       - name: npm build
         run: npm run build --if-present
         working-directory : ./AnurakStillLife/client
-      - name: Create folder
-        run: |
-          mkdir -p dist/client && cp -R wwwroot dist/client
-          ls dist/client
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
