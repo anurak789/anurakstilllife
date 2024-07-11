@@ -34,8 +34,8 @@ jobs:
         working-directory : ./AnurakStillLife/client
       - name: Create folder
         run: |
-          mkdir -p dist && cp -R app dist
-          ls dist
+          mkdir -p dist/client && cp -R wwwroot dist/client
+          ls dist/client
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
