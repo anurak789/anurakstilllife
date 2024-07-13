@@ -4,3 +4,12 @@
     }
   }
 
+  a {
+    text-decoration: none;
+    color: darkgrey;
+
+    &.active {
+      color: darkorange;
+    }
+  }
+

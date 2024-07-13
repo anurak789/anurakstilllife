@@ -2,6 +2,6 @@
 {
     public interface IKeyVaultManager
     {
-        public Task<string> GetVaultSecret();
+        public Task<string> GetVaultSecret(string secretName);
     }
 }

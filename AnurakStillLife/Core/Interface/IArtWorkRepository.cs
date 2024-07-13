@@ -1,4 +1,6 @@
-﻿namespace Core.Interface
+﻿using Core.Entities;
+
+namespace Core.Interface
 {
     public interface IArtWorkRepository
     {

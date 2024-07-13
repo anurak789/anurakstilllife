@@ -1,0 +1,17 @@
+<p>art-details works!</p>
+<div class="row d-flex align-items-center" *ngIf="artwork">
+    <div class="col">
+      <div class="card shadow-sm mb-4 me-2 rounded-3">
+        <img width="250" height="225" src="../assets/images/{{artwork.filePath}}" alt=""/>
+        <div class="card-body">
+          <p>{{artwork.description}}</p><p>{{artwork.size}}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <a routerLink="/art" class="btn btn-outline-secondary rounded-pill" aria-disabled="true">Back to arts...</a>
+            </div>
+            <small class="text-body-secondary">{{artwork.price}}$</small>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

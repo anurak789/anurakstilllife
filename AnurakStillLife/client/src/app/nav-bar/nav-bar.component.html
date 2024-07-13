@@ -22,9 +22,20 @@
           <i class="fa-regular fa-paintbrush"></i>
           <strong>Anurak Pankham Still Life</strong>
         </a>
-        <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class=" align-items-center">
+          <a class="p-2" 
+          routerLink="/" 
+          routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact: true}"
+          >Home</a>
+          <a class="p-2" routerLink="/art" routerLinkActive="art">My Arts</a>
+        </div>
+        <div class="align-items-end">
+          <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a routerLink="/login" class="btn btn-outline-secondary me-2">Login</a>
+        </div>
       </div>
     </div>
 </header>

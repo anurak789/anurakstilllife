@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Art, ArtList } from '../shared/modeles/arts';
+import { ArtService } from './art.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-art',
@@ -8,10 +10,16 @@ import { Art, ArtList } from '../shared/modeles/arts';
 })
 export class ArtComponent implements OnInit{
 
-  artworks: Art[] = ArtList;
+  artworks: Art[] = [];
+
+  constructor(private artService: ArtService) {}
 
   ngOnInit(): void {
-    //throw new Error('Method not implemented.');
+
+    this.artService.getArtWorks().subscribe({
+      next: response => this.artworks = response.sort(),
+      error: error => console.log(error)
+    })
   }
 
 }

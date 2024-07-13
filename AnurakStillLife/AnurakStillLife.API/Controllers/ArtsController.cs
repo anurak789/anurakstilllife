@@ -1,6 +1,6 @@
 ﻿using AnurakStillLife.API.Dtos;
 using AutoMapper;
-using Core;
+using Core.Entities;
 using Core.Interface;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;

@@ -17,7 +17,7 @@ namespace Infrastructure.Services
             this.configuration = configuration;
         }
 
-        public async Task<string> GetVaultSecret()
+        public async Task<string> GetVaultSecret(string secretName)
         {
             try
             {
@@ -34,8 +34,8 @@ namespace Infrastructure.Services
 
                 var secretClient = new SecretClient(new Uri(this.configuration.GetSection("KeyVaultUri").Value), new DefaultAzureCredential(), options);
 
-                var secret = await secretClient.GetSecretAsync(this.configuration.GetSection("SecretKey").Value);
-                //var secret = await secretClient.GetSecretAsync(secretName);
+                //var secret = await secretClient.GetSecretAsync(this.configuration.GetSection("SecretKey").Value);
+                var secret = await secretClient.GetSecretAsync(secretName);
 
                 //KeyVaultSecret keyValueSecret = await this.secretClient.GetSecretAsync(secret.Value);
 

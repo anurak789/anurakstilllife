@@ -8,20 +8,26 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { FormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AccountModule } from './account/account.module';
 
+import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ArtComponent } from './art/art.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ArtModule } from './art/art.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     ArtComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,10 +40,14 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     CarouselModule,
     NgbModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ReactiveFormsModule,
+    AccountModule,
+    ArtModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })
