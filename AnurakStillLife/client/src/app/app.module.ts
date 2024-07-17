@@ -9,8 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AccountModule } from './account/account.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { AccountModule } from './account/account.module';
 import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { ArtComponent } from './art/art.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ArtModule } from './art/art.module';
+import { NetPostComponent } from './net-post/net-post.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { ArtModule } from './art/art.module';
     ArtComponent,
     FooterComponent,
     HomeComponent,
+    NetPostComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { ArtModule } from './art/art.module';
     CollapseModule,
     AccordionModule,
     AlertModule,
+    FontAwesomeModule,
     ButtonsModule,
     FormsModule,
     CarouselModule,

@@ -4,13 +4,13 @@
         <div class="row">
           <div class="col-sm-8 col-md-7 py-4">
             <h4>About</h4>
-            <p class="text-body-secondary">Hello! My name is Anurak Pankham. I'm a freelance still life artist and a software engineer. Thank you for liking my works.</p>
+            <p class="text-body-secondary">Hello! My name is Anurak Pankham(Om is my nickname). I'm a freelance still life artist and a software engineer. Thank you for liking my works.<fa-icon [icon]="faSmile"></fa-icon></p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4>Contact</h4>
             <ul class="list-unstyled">
-              <li><a href="linkedin.com/in/anurak-pankham-15a7b1151" class="text-white">Follow on Linkedin</a></li>
-              <li><a href="pkanurak@gmail.com" class="text-white">Email me</a></li>
+              <li><a href="linkedin.com/in/anurak-pankham-15a7b1151" target="_blank" class="text-white">Follow on Linkedin</a></li>
+              <span class="text-body-secondary">I can be reached at {{email}}.</span>
             </ul>
           </div>
         </div>
@@ -19,16 +19,17 @@
     <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
-          <i class="fa-regular fa-paintbrush"></i>
+          <fa-icon [icon]="faPaintBrush"></fa-icon>
           <strong>Anurak Pankham Still Life</strong>
         </a>
-        <div class=" align-items-center">
+        <div class=" align-items-center text-uppercase fs-6">
           <a class="p-2" 
           routerLink="/" 
           routerLinkActive="active" 
           [routerLinkActiveOptions]="{exact: true}"
           >Home</a>
-          <a class="p-2" routerLink="/art" routerLinkActive="art">My Arts</a>
+          <a class="p-2" routerLink="/art" routerLinkActive="art">Arts</a>
+          <a class="p-2" routerLink="/netpost" routerLinkActive="art">.Net</a>
         </div>
         <div class="align-items-end">
           <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArtService } from '../art.service';
-import { Art } from '../../shared/modeles/arts';
+import { Art, ArtList } from '../../shared/modeles/arts';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,6 +15,7 @@ export class ArtDetailsComponent implements OnInit{
   
   ngOnInit(): void {
     this.loadProduct();
+    //this.artwork = ArtList.findIndex(x => x.id = 0);
   }
 
   loadProduct() {

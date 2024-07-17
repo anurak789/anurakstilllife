@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
+import { faSmile } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
   public isCollapsed : boolean = true;
+email: any = 'pkanurak@gmail.com';
+faPaintBrush = faPaintBrush;
+faSmile = faSmile;
 }

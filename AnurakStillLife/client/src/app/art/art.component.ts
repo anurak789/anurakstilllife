@@ -10,16 +10,17 @@ import { response } from 'express';
 })
 export class ArtComponent implements OnInit{
 
-  artworks: Art[] = [];
+  //artworks: Art[] = [];
+  artworks: Art[] = ArtList;
 
   constructor(private artService: ArtService) {}
 
   ngOnInit(): void {
 
-    this.artService.getArtWorks().subscribe({
-      next: response => this.artworks = response.sort(),
-      error: error => console.log(error)
-    })
+    //this.artService.getArtWorks().subscribe({
+    //  next: response => this.artworks = response.sort(),
+    //  error: error => console.log(error)
+    //})
   }
 
 }

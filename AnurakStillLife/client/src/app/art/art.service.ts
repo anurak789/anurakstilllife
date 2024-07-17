@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ArtList, Art } from '../shared/modeles/arts';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
@@ -8,7 +9,7 @@ import { ArtList, Art } from '../shared/modeles/arts';
 })
 export class ArtService {
 
-  baseUrl = 'https://localhost:7032/api/'
+  baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 

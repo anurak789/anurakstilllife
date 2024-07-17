@@ -16,7 +16,7 @@ export const ArtList = [
     description: 'Apples and vases decoration.',
     price: 99.99,
     size: '40x40cm',
-    filePath: 'applesvases.jpg',
+    filePath: 'applevases.jpg',
     artType: 'Still life',
     artist: 'Anurak Pankham'
     },
