@@ -28,8 +28,8 @@
           routerLinkActive="active" 
           [routerLinkActiveOptions]="{exact: true}"
           >Home</a>
-          <a class="p-2" routerLink="/art" routerLinkActive="art">Arts</a>
-          <a class="p-2" routerLink="/netpost" routerLinkActive="art">.Net</a>
+          <a class="p-2" routerLink="/art" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Arts</a>
+          <a class="p-2" routerLink="/netpost" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">.Net</a>
         </div>
         <div class="align-items-end">
           <button class="navbar-toggler collapsed" type="button" (click)="isCollapsed = !isCollapsed" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" [attr.aria-expanded]="!isCollapsed" aria-label="Toggle navigation">
