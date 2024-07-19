@@ -115,7 +115,7 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets"
+              "src/assets",
               {
                 "glob": "**/*",
                 "input": "public"
