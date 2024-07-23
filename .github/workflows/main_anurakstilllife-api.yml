@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/publish
+          path: ./AnurakStillLife/AnurakStillLife.API/publish
 
   deploy:
     runs-on: ubuntu-latest
