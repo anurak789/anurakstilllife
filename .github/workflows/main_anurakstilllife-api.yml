@@ -31,7 +31,7 @@ jobs:
         run: dotnet build ./AnurakStillLife/AnurakStillLife.API/AnurakStillLife.API.csproj --configuration Release --no-restore
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/publish
+        run: dotnet publish ./AnurakStillLife/AnurakStillLife.API/AnurakStillLife.API.csproj -c Release -o ./publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'anurakstilllife-api'
           slot-name: 'Production'
-          package: .
+          package: ./publish
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_407F5CDF87204C6AA4779600F8A99912 }}
