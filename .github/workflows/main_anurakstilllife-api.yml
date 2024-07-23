@@ -9,6 +9,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  DOTNET_ROOT: './AnurakStillLife/AnurakStillLife.API'      # set this to the path to your web app project, defaults to the repository root
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,17 +24,20 @@ jobs:
         with:
           dotnet-version: '8.x'
 
+      - name: Install dependencies
+        run: dotnet restore ./AnurakStillLife/AnurakStillLife.API/AnurakStillLife.API.csproj
+
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build ./AnurakStillLife/AnurakStillLife.API/AnurakStillLife.API.csproj --configuration Release --no-restore
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ${{env.DOTNET_ROOT}}/publish
 
   deploy:
     runs-on: ubuntu-latest
