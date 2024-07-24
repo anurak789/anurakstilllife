@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
+import { environment } from '../environments/environment';
+import { identity } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,12 +14,12 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     /** spinner starts on init */
-    this.spinner.show();
+    environment.production ? identity : this.spinner.show();
 
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
-    }, 3000);
+    }, 1000);
   }
   title = 'anurakstilllife';
 }
