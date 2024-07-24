@@ -32,7 +32,8 @@ namespace Infrastructure.Services
                      }
                 };
 
-                var secretClient = new SecretClient(new Uri(this.configuration.GetSection("KeyVaultUri").Value), new DefaultAzureCredential(), options);
+                var secretClient = new SecretClient(new Uri(this.configuration.GetSection("KeyVaultUri").Value), new DefaultAzureCredential(
+                    new DefaultAzureCredentialOptions { ManagedIdentityClientId = this.configuration.GetSection("UAClientId").Value }), options);
 
                 //var secret = await secretClient.GetSecretAsync(this.configuration.GetSection("SecretKey").Value);
                 var secret = await secretClient.GetSecretAsync(secretName);
