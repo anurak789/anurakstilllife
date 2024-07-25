@@ -1,4 +1,4 @@
-@AnurakStillLife.API_HostAddress = http://localhost:5020
+@AnurakStillLife.API_HostAddress = https://localhost:7032
 
 GET {{AnurakStillLife.API_HostAddress}}/weatherforecast/
 Accept: application/json
