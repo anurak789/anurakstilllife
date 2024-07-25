@@ -57,6 +57,5 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'anurakstilllife-api'
-          slot-name: 'Production'
-          package: .
+          package: ./publish/anurakstilllife-api
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_407F5CDF87204C6AA4779600F8A99912 }}
