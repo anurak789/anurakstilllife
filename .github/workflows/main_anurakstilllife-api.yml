@@ -57,5 +57,5 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'anurakstilllife-api'
-          package: ./publish/anurakstilllife-api
+          package: ./publish
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_407F5CDF87204C6AA4779600F8A99912 }}
