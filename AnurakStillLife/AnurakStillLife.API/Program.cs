@@ -46,6 +46,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerDocumentation();
 }
 
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 //app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
 app.UseAuthentication();
